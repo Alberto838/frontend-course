@@ -1,0 +1,47 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: sans-serif;
+	background-color: #333;
+	font-size: 36px;
+	color: #fff;
+}
+
+main {
+	margin-top: 50px;
+}
+
+div {
+	margin: 0 auto;
+	height: 200px;
+	width: 600px;
+	border: 3px solid black;
+}
+
+.red {
+	background-color: tomato;
+}
+
+.blue {
+    position: relative;
+	margin: 20px auto;
+	background-color: royalblue;
+}
+
+.green {
+	background-color: greenyellow;
+}
+
+.gold {
+    position: absolute;
+	margin: 0;
+	width: 120px;
+	height: 120px;
+    top: 0;
+    right: 25px;
+	background-color: gold;
+}
