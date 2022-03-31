@@ -1,0 +1,58 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	background-color: #333;
+}
+
+div {
+	border: solid 2px black;
+	position: absolute;
+}
+
+.long {
+	background-color: red;
+	width: 800px;
+	height: 60px;
+	top: 50px;
+	left: calc(50% - 400px);
+}
+
+.sh {
+	width: 300px;
+	height: 60px;
+}
+
+.short {
+	background-color: royalblue;
+	top: 180px;
+	border-radius: 25px;
+	left: calc(50% - 150px);
+}
+
+.short2 {
+	background-color: yellow;
+	top: 300px;
+	border-radius: 10px;
+	left: calc(30% - 150px);
+}
+
+.short3 {
+	background-color: lime;
+	top: 300px;
+	border-radius: 10px;
+	left: calc(70% - 150px);
+}
+
+.center {
+	background-color: none;
+	width: 400px;
+	height: 200px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
