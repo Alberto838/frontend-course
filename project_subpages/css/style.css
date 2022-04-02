@@ -71,13 +71,14 @@ body {
 	background-color: rgba(0, 7, 109, 0.411);
 }
 
+/* footer */
 footer {
 	height: 80px;
 	line-height: 80px;
 	color: #fff;
 	background-color: #333;
 	text-align: center;
-    font-size: 20px;
+	font-size: 20px;
 }
 
 .icon-box {
@@ -85,7 +86,7 @@ footer {
 }
 
 .icon-box a {
-    margin: 0 5px;
+	margin: 0 5px;
 	color: #fff;
 	transition: color 0.3s;
 	font-size: 30px;
@@ -95,42 +96,85 @@ footer {
 	color: rgb(98, 138, 255);
 }
 
+/* main */
 main {
-    margin: 50px auto;
-    width: 1200px;
+	margin: 50px auto;
+	width: 1200px;
+}
+
+h2 {
+	margin: 10px;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 .about-us-box {
-    margin: 40px 0;
+	position: relative;
+	height: 250px;
+	margin: 40px 0;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
 }
 
 .top {
-    position: relative;
-    height: 250px;
-    background-image: url('../img/cat-gcea1e9975_1920.jpg');
-    background-position: center;
-    background-image: fixed;
+	background-image: url('../img/cat-gcea1e9975_1920.jpg');
 }
 
 .middle {
-    position: relative;
-    height: 250px;
-    background-image: url('../img/building-g8f8d8b90f_1920.jpg');
-    background-position: 45% 35%;
-    background-size:cover;
-    background-image: fixed;
+	background-image: url('../img/building-g8f8d8b90f_1920.jpg');
 }
 
 .bottom {
-    position: relative;
-    height: 250px;
-    background-image: url('../img/man-gfe2cc3d18_1920.jpg');
-    background-position: 45% 50%;
-    background-size: cover;
-    background-image: fixed;
+	background-image: url('../img/man-gfe2cc3d18_1920.jpg');
+}
+
+.about-us-text {
+	position: absolute;
+	padding: 10px 40px;
+	bottom: 20px;
+	text-align: center;
+	color: #fff;
 }
 
 .about-us-box h3 {
-    text-transform: uppercase;
-    color: #fff;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.about-us-bg {
+	position: absolute;
+	bottom: 0;
+	height: 40%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* uslugi */
+.services {
+	display: table;
+	margin: 0 auto;
+}
+
+table {
+	background-color: rgb(98, 138, 255);
+	border: solid 3px #333;
+	margin: 0 auto;
+}
+
+td {
+	padding: 10px 6px;
+}
+
+.contact-info {
+	text-align: center;
+	padding: 5px;
+	font-size: 24px;
+}
+
+.contact-info .fa-solid {
+	margin-right: 10px;
 }
