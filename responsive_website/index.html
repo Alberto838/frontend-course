@@ -18,9 +18,9 @@
         <div class="wrapper"><button class="burger-icon"><i class="fas fa-bars"></i></button>
             <div class="nav-items">
                 <a href="#">home</a>
-                <a href="#">o nas</a>
-                <a href="#">produkty</a>
-                <a href="#">kontakt</a>
+                <a href="#about-us">o nas</a>
+                <a href="#locations">lokacje</a>
+                <a href="#contact">kontakt</a>
             </div>
         </div>
     </nav>
@@ -36,7 +36,7 @@
     </header>
 
     <main>
-        <section class="about-us wrapper">
+        <section class="about-us wrapper" id="about-us">
             <h2 class="section-title">o nas</h2>
             <p class="about-us-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, veritatis beatae!
                 Possimus, iste nisi! Iusto modi, incidunt praesentium, consequatur sint molestiae illum quibusdam veniam
@@ -46,45 +46,54 @@
                 pariatur consectetur veniam ut quasi sed sequi!</p>
         </section>
 
-        <section class="products wrapper">
-            <h2 class="section-title">produkty</h2>
+        <section class="locations wrapper" id="locations">
+            <h2 class="section-title">lokacje</h2>
 
-            <div class="product first-product">
-                <div class="hero-bg"></div>
-                <div class="hero-text">
-                    <h3>jakaś tam plaża</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, minima?</p>
+            <div class="locations-box">
+                <div class="location first-loc">
+                    <div class="hero-bg"></div>
+                    <div class="hero-text">
+                        <h3>jakaś tam plaża</h3>
+                    </div>
                 </div>
-            </div>
 
-            <div class="product second-product">
-                <div class="hero-bg"></div>
-                <div class="hero-text">
-                    <h3>tokyo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente placeat autem exercitationem explicabo alias recusandae harum, quidem cum et.</p>
+                <div class="location second-loc">
+                    <div class="hero-bg"></div>
+                    <div class="hero-text">
+                        <h3>tokyo</h3>
+                    </div>
                 </div>
-            </div>
 
-            <div class="product third-product">
-                <div class="hero-bg"></div>
-                <div class="hero-text">
-                    <h3>Neapol</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit veritatis atque reprehenderit perspiciatis cupiditate laboriosam.</p>
+                <div class="location third-loc">
+                    <div class="hero-bg"></div>
+                    <div class="hero-text">
+                        <h3>Neapol</h3>
+                    </div>
                 </div>
-            </div>
 
-            <div class="product fourth-product">
-                <div class="hero-bg"></div>
-                <div class="hero-text">
-                    <h3>polinezja francuska</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, eius!</p>
+                <div class="location fourth-loc">
+                    <div class="hero-bg"></div>
+                    <div class="hero-text">
+                        <h3>polinezja francuska</h3>
+                    </div>
                 </div>
             </div>
 
         </section>
 
+        <section class="contact wrapper" id="contact">
+            <h2 class="section-title">kontakt</h2>
+            <p><i class="fa-solid fa-phone"></i>+48 000 000 000</p>
+            <p><i class="fa-solid fa-envelope"></i>kontakt@infjourney.pl</p>
+            <h3>adres</h3>
+            <p>ul. Nieskończona 0</p>
+            <p>00-000 Warszawa</p>
+        </section>
+
     </main>
-    <footer></footer>
+    <footer>
+        <p>&copy; 2020 Infinite Journey</p>
+    </footer>
 </body>
 
 </html>

@@ -4,6 +4,10 @@
 	padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -31,6 +35,7 @@ body {
 
 .hero-text h1 {
     margin-bottom: 5px;
+    text-transform: uppercase;
     text-shadow: 3px 3px 5px #000;
     color: #ccc;
 }
@@ -46,13 +51,20 @@ body {
     text-align: center;
 }
 
+section {
+    scroll-margin-top: 80px;
+}
+
 
 /* nawigacja */
 nav {
+    position: sticky;
+    top: 0;
 	height: 60px;
 	line-height: 60px;
 	background-color: #ddd;
 	text-align: center;
+    z-index: 10;
 }
 
 .burger-icon {
@@ -87,52 +99,67 @@ main {
 /* o nas */
 .about-us-info {
     margin-bottom: 10px;
-    text-align: center;
+    padding: 0 20px;
 }
 
-/* produkty */
-.products {
+/* lokalizacje */
+.locations {
     margin: 60px auto;
 }
 
-.product h3 {
+.location {
+position: relative;
+height: 300px;
+background-size: cover;
+background-position: center;
+text-align: center;
+font-size: 16px;
+}
+
+.location h3 {
     text-transform: uppercase;
+    transition: transform .3s;
 }
 
-.first-product {
-    position: relative;
-    height: 300px;
+.first-loc {
     background-image: url(../img/beach.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
 }
 
-.second-product {
-    position: relative;
-    height: 300px;
+.second-loc {
     background-image: url(../img/tokyo.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
 }
 
-.third-product {
-    position: relative;
-    height: 300px;
+.third-loc {
     background-image: url(../img/napoli.jpg);
-    background-size: cover;
-    background-position: center;
+}
+
+.fourth-loc {
+    background-image: url(../img/polynesia.jpg);
+}
+
+.location:hover h3 {
+    transform: scale(1.5);
+}
+
+/* kontakt */
+.contact {
     text-align: center;
 }
 
-.fourth-product {
-    position: relative;
-    height: 300px;
-    background-image: url(../img/polynesia.jpg);
-    background-size: cover;
-    background-position: center;
+.contact h3 {
+    text-transform: uppercase;
+    margin: 20px 0 5px;
+}
+
+.fa-solid {
+    margin-right: 10px;
+}
+
+/* footer */
+footer{
+    padding: 30px 10px;
     text-align: center;
+    background-color: #ddd;
 }
 
 @media (min-width: 768px) {
@@ -168,23 +195,38 @@ main {
     }
 
     .hero-text p {
-        font-size: 18px;
+        font-size: 16px;
     }
 
-    .first-product {
+    .first-loc {
         background-image: url(../img/beach-big.jpg);
     }
 
-    .second-product {
+    .second-loc {
         background-image: url(../img/tokyo-big.jpg);
     }
 
-    .third-product {
+    .third-loc {
         background-image: url(../img/napoli-big.jpg);
     }
 
-    .fourth-product {
+    .fourth-loc {
         background-image: url(../img/polynesia-big.jpg);
+    }
+
+    .location h3 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 992px) {
+    .locations-box{
+        font-size: 0;
+    }
+
+    .location{
+        display: inline-block;
+        width: 50%;
     }
 }
 
