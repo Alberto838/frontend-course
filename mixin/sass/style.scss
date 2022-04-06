@@ -1,0 +1,36 @@
+@mixin addons{
+	background-color: gold;
+	border-radius: 25px;
+}
+
+@mixin color($bg-color) {
+	background-color: $bg-color;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #333;
+	font-family: sans-serif;
+}
+
+.square {
+	margin: 30px;
+	width: 200px;
+	height: 200px;
+	border: 5px solid black;
+
+	@include addons;
+}
+
+.one {
+	@include color(tomato)
+}
+
+.two {
+	@include color(royalblue)
+}
