@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333;
+}
+$square_width: 300px;
+$square_height: 300px;
+$square_color: tomato;
+
+.squares {
+    display: inline-block;
+    margin: 10px;
+    width: $square_width;
+	height: $square_height;
+	background-color: $square_color;
+}
