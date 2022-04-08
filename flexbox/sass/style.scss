@@ -22,16 +22,17 @@ body {
 
 .one {
     display: flex;
+    justify-content: space-around;
 }
 
 .two {
     display: flex;
-    flex-direction: row-reverse;
+    // flex-direction: row-reverse;
     flex-wrap: wrap;
+    justify-content:flex-end;
 }
 
 .three {
     display: flex;
     flex-direction: column-reverse;
-    
 }
