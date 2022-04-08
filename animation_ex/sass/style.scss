@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 36px;
+	color: #fff;
+	background-color: #333;
+}
+
+div {
+	width: 300px;
+	height: 300px;
+	border: 2px solid black;
+}
+
+.square {
+	animation: square_anim 4s forwards;
+}
+
+.circle {
+    background-color: lime;
+	border-radius: 50%;
+    animation: circle_anim 2s 4s forwards;
+}
+
+@keyframes square_anim {
+	0% {
+		background-color: tomato;
+	}
+	50% {
+		width: 600px;
+        height: 300px;
+	}
+	100% {
+		width: 300px;
+		height: 600px;
+		background-color: gold;
+	}
+}
+
+@keyframes circle_anim {
+    from {
+        background-color: lime;
+    }
+	to {
+		background-color: royalblue;
+	}
+}
