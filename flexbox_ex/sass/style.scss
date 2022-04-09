@@ -1,0 +1,87 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 50px;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	font-size: 40px;
+}
+
+section {
+	display: flex;
+	margin: 20px 0;
+	height: 300px;
+	border: 5px solid black;
+}
+
+.square {
+	width: 200px;
+	text-align: center;
+}
+
+.one {
+	background-color: gold;
+}
+
+.two {
+	background-color: lime;
+}
+
+.three {
+	background-color: royalblue;
+}
+
+.four {
+	background-color: tomato;
+}
+
+.first {
+	flex-direction: column;
+
+	.two, .four {
+		flex-grow: 1;
+	}
+}
+
+.second {
+	align-items: center;
+	justify-content: space-around;
+}
+
+.third {
+	flex-direction: row-reverse;
+
+	.three {
+		order: 1;
+	}
+
+	.one {
+		flex-grow: 1;
+	}
+
+	.four {
+		flex-grow: 3;
+	}
+}
+
+.fourth {
+	flex-direction: row-reverse;
+	align-items: flex-end;
+
+	.two {
+		align-self: flex-start;
+	}
+
+	.three {
+		align-self: center;
+	}
+}
+
+// elementy mają być ułożone w rzędzie, kolejność odwrócona
+//         wszystkie elementy mają być przyklejone do dołu na osi Y
+//         odwołaj się do samego DIV-a .two i ustaw go na górze osi Y
+//         odwołaj się do samego DIV-a .three i ustaw go na środku osi Y
