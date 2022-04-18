@@ -44,18 +44,17 @@ nav {
   transition: background-color 0.6s;
 }
 
-nav .nav-link,
 nav a,
 nav i {
   color: #fff;
 }
 
-nav .fa-bars {
-  padding: 10px;
-}
-
 nav a:hover {
   color: #039dff;
+}
+
+nav .fa-bars {
+  padding: 10px;
 }
 
 nav .active {
