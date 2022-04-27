@@ -168,6 +168,35 @@ header .fa-chevron-down {
   z-index: -5;
 }
 
+.aboutus-hero .aboutus-hero-item {
+  margin: 10px 0;
+}
+
+.aboutus-hero .aboutus-hero-item i {
+  font-size: 36px;
+}
+
+.aboutus-hero .aboutus-hero-item .aboutus-hero-title {
+  font-size: 24px;
+}
+
+.portfolio .carousel-item {
+  position: relative;
+  height: 600px;
+}
+
+.portfolio .carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 40px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.portfolio .carousel-indicators {
+  padding-bottom: 20px;
+}
+
 @media (min-width: 375px) {
   header h1 {
     font-size: 36px;
@@ -189,6 +218,12 @@ header .fa-chevron-down {
 @media (min-width: 992px) {
   html {
     scroll-padding-top: 72px;
+  }
+  .aboutus-hero {
+    background-image: url("../img/cpu_big.jpg");
+  }
+  .slides {
+    display: block;
   }
 }
 

@@ -37,7 +37,7 @@ h2 {
 .shadow-bg {
 	background-color: rgba(0, 0, 0, 0.8);
 }
-
+//NAVIGATION
 nav {
 	text-transform: uppercase;
 	z-index: 1;
@@ -61,7 +61,7 @@ nav {
 		color: $main-color;
 	}
 }
-
+//HEADER
 header {
 	color: $white;
 
@@ -116,7 +116,7 @@ header {
 		color: $white;
 	}
 }
-
+//ABOUT US
 .aboutus {
 	i {
 		margin-top: 20px;
@@ -140,7 +140,7 @@ header {
 		color: $main-color;
 	}
 }
-
+//PLATFORMS
 .aboutus-hero {
 	position: relative;
 	background-image: url('../img/cpu_small.jpg');
@@ -157,8 +157,39 @@ header {
 		background-color: rgba(0, 0, 0, 0.6);
 		z-index: -5;
 	}
-}
 
+	.aboutus-hero-item {
+		margin: 10px 0;
+
+		i {
+			font-size: 36px;
+		}
+
+		.aboutus-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+//PORTFOLIO
+.portfolio {
+	.carousel-item {
+		position: relative;
+		height: 600px;
+	}
+
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+//MEDIA QUERIES
 @media (min-width: 375px) {
 	header {
 		h1 {
@@ -186,6 +217,14 @@ header {
 @media (min-width: 992px) {
 	html {
 		scroll-padding-top: 72px;
+	}
+
+	.aboutus-hero {
+		background-image: url('../img/cpu_big.jpg');
+	}
+
+	.slides {
+		display: block;
 	}
 }
 
