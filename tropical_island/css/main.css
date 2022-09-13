@@ -588,6 +588,8 @@ body {
   .offers__option-img {
     width: 50%;
     height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .offers__option-img--right {
     -webkit-box-ordinal-group: 2;
@@ -714,7 +716,10 @@ body {
   .offers__option-img {
     -o-object-fit: cover;
        object-fit: cover;
-    height: 300px;
+    height: 310px;
+  }
+  .offers__option-info {
+    width: 50%;
   }
   .offers__option-text {
     font-size: 1.5rem;
