@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>template</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
@@ -90,7 +91,8 @@
                     <div class="islands__card" onclick="void(0)">
                         <div class="islands__card-img islands__card-img--first">
                             <h3 class="islands__card-img-title">Wyspa Tiki Taki</h3>
-                            <p class="islands__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji</p>
+                            <p class="islands__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji
+                            </p>
                         </div>
                         <div class="islands__card-info">
                             <h3 class="islands__card-info-title">Wyspa Tiki Taki</h3>
@@ -108,7 +110,8 @@
                     <div class="islands__card" onclick="void(0)">
                         <div class="islands__card-img islands__card-img--second">
                             <h3 class="islands__card-img-title">Wyspa Toca Toca</h3>
-                            <p class="islands__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji</p>
+                            <p class="islands__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji
+                            </p>
                         </div>
                         <div class="islands__card-info">
                             <h3 class="islands__card-info-title">Wyspa Toca Toca</h3>
@@ -126,7 +129,8 @@
                     <div class="islands__card" onclick="void(0)">
                         <div class="islands__card-img islands__card-img--third">
                             <h3 class="islands__card-img-title">Wyspa Nobu</h3>
-                            <p class="islands__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji</p>
+                            <p class="islands__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej informacji
+                            </p>
                         </div>
                         <div class="islands__card-info">
                             <h3 class="islands__card-info-title">Wyspa Nobu</h3>
@@ -148,50 +152,113 @@
         </section>
 
         <section class="offers section-padding section" id="offers">
-        <div class="white-block white-block-right"></div>
-        <div class="white-block white-block-left"></div>
+            <div class="white-block white-block-right"></div>
+            <div class="white-block white-block-left"></div>
 
-        <h2 class="section-heading">Oferty</h2>
-        <div class="wrapper">
+            <h2 class="section-heading">Oferty</h2>
+            <div class="wrapper">
 
-            <div class="offers__box">
+                <div class="offers__box">
 
-                <div class="offers__option">
-                    <img src="img/bubbles.jpg" alt="Impreza z dziećmi nad wodą" class="offers__option-img">
-                    <div class="offers__option-info">
-                        <h3 class="offers__option-heading">Wyjazd z dziećmi</h3>
-                        <p class="offers__option-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates provident eveniet expedita vel laboriosam aliquam molestias ipsa quaerat porro possimus.</p>
-                        <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ducimus.</p>
-                        <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                    <div class="offers__option">
+                        <img src="img/bubbles.jpg" alt="Impreza z dziećmi nad wodą" class="offers__option-img">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Wyjazd z dziećmi</h3>
+                            <p class="offers__option-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptates provident eveniet expedita vel laboriosam aliquam molestias ipsa quaerat
+                                porro possimus.</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptatem, ducimus.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
                     </div>
-                </div>
-                <div class="offers__option">
-                    <img src="img/bonfire.jpg" alt="Ognisko wśród znajomych" class="offers__option-img offers__option-img--right">
-                    <div class="offers__option-info">
-                        <h3 class="offers__option-heading">Wypad ze znajomymi</h3>
-                        <p class="offers__option-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates provident eveniet expedita vel laboriosam aliquam molestias ipsa quaerat porro possimus.</p>
-                        <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ducimus.</p>
-                        <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                    <div class="offers__option">
+                        <img src="img/bonfire.jpg" alt="Ognisko wśród znajomych"
+                            class="offers__option-img offers__option-img--right">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Wypad ze znajomymi</h3>
+                            <p class="offers__option-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptates provident eveniet expedita vel laboriosam aliquam molestias ipsa quaerat
+                                porro possimus.</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptatem, ducimus.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
                     </div>
-                </div>
-                <div class="offers__option">
-                    <img src="img/beach.jpg" alt="Kolacja na plaży" class="offers__option-img">
-                    <div class="offers__option-info">
-                        <h3 class="offers__option-heading">Tylko we dwoje</h3>
-                        <p class="offers__option-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates provident eveniet expedita vel laboriosam aliquam molestias ipsa quaerat porro possimus.</p>
-                        <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ducimus.</p>
-                        <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                    <div class="offers__option">
+                        <img src="img/beach.jpg" alt="Kolacja na plaży" class="offers__option-img">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Tylko we dwoje</h3>
+                            <p class="offers__option-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptates provident eveniet expedita vel laboriosam aliquam molestias ipsa quaerat
+                                porro possimus.</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptatem, ducimus.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
                     </div>
-                </div>
 
+
+                </div>
 
             </div>
+        </section>
 
-        </div>
-    </section>
+        <section class="reviews section-padding section white-section" id="reviews">
+            <h2 class="section-heading">Opinie</h2>
+            <div class="wrapper">
+
+                <div class="reviews__boxes">
+                    <div class="review__box">
+                        <div class="review__box-img">
+                            <img src="./img/womanblack.jpg" alt="Anna Nowak">
+                        </div>
+                        <div class="review__box-info">
+                            <div class="review__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="review__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                                voluptas quos blanditiis deleniti corrupti eaque incidunt nobis voluptatem fugiat
+                                expedita.</p>
+                            <strong>Anna Nowak</strong>
+                        </div>
+                    </div>
+                
+                    <div class="review__box">
+                        <div class="review__box-img">
+                            <img src="./img/male.jpg" alt="Jan Kowalski">
+                        </div>
+                        <div class="review__box-info">
+                            <div class="review__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="review__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                                voluptas quos blanditiis deleniti corrupti eaque incidunt nobis voluptatem fugiat
+                                expedita.</p>
+                            <strong>Jan Kowalski</strong>
+                        </div>
+                    </div>
+                
+                
+                    <div class="review__box">
+                        <div class="review__box-img">
+                            <img src="./img/womanwhite.jpg" alt="Maria Wiśniewska">
+                        </div>
+                        <div class="review__box-info">
+                            <div class="review__box-quote"><i class="fas fa-quote-right"></i></div>
+                            <p class="review__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                                voluptas quos blanditiis deleniti corrupti eaque incidunt nobis voluptatem fugiat
+                                expedita.</p>
+                            <strong>Maria Wiśniewska</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
 
     </main>
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/slick.js"></script>
     <script src="/js/main.js"></script>
 </body>
 
