@@ -20,6 +20,7 @@ body {
 	font-size: 1.6rem;
 }
 
+
 // NAV
 
 .burger-btn {
@@ -130,6 +131,14 @@ body {
 
 .nav-items-animation {
 	animation: navItemsAnimation 1s both;
+}
+
+// BURGER-BTN
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: $dark;
 }
 
 //HEADER
