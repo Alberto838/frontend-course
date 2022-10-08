@@ -120,4 +120,12 @@ header {
 		color: $white;
 		text-shadow: 0 0 5px rgb(0, 0, 0);
 	}
+
+	.fa-chevron-down {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;font-size: 3rem;
+		color: $white;
+	}
 }
