@@ -198,10 +198,13 @@ header .fa-chevron-down {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  top: 100px;
+  top: 25%;
+  -webkit-transform: translateX(0, -25%);
+          transform: translateX(0, -25%);
 }
 
 .building__card {
+  position: relative;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -214,12 +217,16 @@ header .fa-chevron-down {
 }
 
 .building__card-img {
-  height: 450px;
-  width: 350px;
+  height: 400px;
+  width: 300px;
   border-radius: 8px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
   z-index: -1;
+}
+
+.building__card p {
+  position: absolute;
 }
 
 .building__card-title {
@@ -229,5 +236,35 @@ header .fa-chevron-down {
   font-weight: normal;
   font-size: 2rem;
   z-index: 11;
+}
+
+.guziczki {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.guziczek {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  background-color: #181818;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+  width: 150px;
+  height: 40px;
 }
 /*# sourceMappingURL=main.css.map */

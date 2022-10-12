@@ -177,9 +177,11 @@ header {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
-		top: 100px;
+		top: 25%;
+		transform: translateX(0, -25%);
 	}
 	&__card {
+		position: relative;
 		transition: transform 0.3s;
 
 		&:hover {
@@ -187,11 +189,15 @@ header {
 		}
 
 		&-img {
-			height: 450px;
-			width: 350px;
+			height: 400px;
+			width: 300px;
 			border-radius: 8px;
 			box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 			z-index: -1;
+		}
+
+		p {
+			position: absolute;
 		}
 
 		&-title {
@@ -203,4 +209,27 @@ header {
 			z-index: 11;
 		}
 	}
+}
+
+// TEST SUBPAGE
+
+.guziczki {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	height: 100%;
+	align-items: center;
+}
+
+.guziczek {
+	text-transform: uppercase;
+	text-align: center;
+	padding: 10px;
+	background-color: rgb(24, 24, 24);
+	color: $white;
+	text-decoration: none;
+	border-radius: 8px;
+	border: none;
+	width: 150px;
+	height: 40px;
 }
