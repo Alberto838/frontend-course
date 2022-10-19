@@ -32,45 +32,32 @@ body section {
 }
 
 .nav {
-  position: absolute;
-  width: 100%;
-  display: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.nav-subpage {
-  position: absolute;
-  width: 100%;
+  position: fixed;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  background-image: linear-gradient(45deg, #1469f1, #2a0ab8);
 }
 
-.nav-link {
-  padding: 15px;
-  margin: 5px;
+.nav__link {
+  position: relative;
+  display: block;
+  margin: 0.5em 0;
+  padding: 0.5em 2em;
+  font-size: 2.8rem;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: #039dff;
 }
 
 .burger-btn {
@@ -291,5 +278,28 @@ header .fa-chevron-down {
   border: none;
   width: 150px;
   height: 40px;
+}
+
+.test-block {
+  width: 200px;
+  border: 2px solid #47ec1e;
+  background: rgba(71, 236, 30, 0.7);
+  text-align: center;
+  color: #000;
+  padding: 20px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 /*# sourceMappingURL=main.css.map */
