@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://kit.fontawesome.com/fe4e8edd2b.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -27,18 +26,22 @@
         <a class="nav-link" href="test.html">kolorki</a>
     </nav>
 
-    <div id="animacjaTestowa1" class="test-block">Kliknij a się powiększę</div>
+    <div class="building__cards">
 
-    <script>
-        $("#animacjaTestowa1").on("click", function(){
-            $(this).animate({
-                width: "500px",
-                opacity: 0.4,
-                fontSize: "3em",
-                borderWidth: "10px"
-            }, 1500);
-        });
-    </script>
+        <div class="building__card">
+            <img src="./img/ampln/top1.jpg" alt="1 World Trade Center" class="building__card-img">
+            <h3 class="building__card-title">1 world trade center</h3>
+        </div>
+
+        <div class="building__card">
+            <img src="./img/ampln/top2.jpg" alt="Central Park Tower" class="building__card-img">
+            <h3 class="building__card-title">central park tower</h3>
+        </div>
+
+        <div class="building__card">
+            <img src="./img/ampln/top3.jpg" alt="Willis Tower" class="building__card-img">
+            <h3 class="building__card-title">willis tower</h3>
+        </div>
 
 </body>
 
