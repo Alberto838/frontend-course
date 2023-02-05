@@ -86,18 +86,36 @@ let ulubionyKolor = 'czerwony'
 // const num5 = '451'
 // console.log(parseInt(num5));
 
-// -------------- EXERCISE
+// -------------- EXERCISE IF
 
-const x = 50
-let result
+// const x = 50
+// let result
 
-if (x >= 100) {
-    result = 'X >= 100'
-} else if (x > 30 & x < 100) {
-    result = 'X jest średniakiem'
-} else {
-    result = 'X jest mały'
+// if (x >= 100) {
+//     result = 'X >= 100'
+// } else if (x > 30 && x < 100) {
+//     result = 'X jest średniakiem'
+// } else {
+//     result = 'X jest mały'
+// }
+
+// result = result.toUpperCase()
+// console.log(result);
+
+// -------------- EXERCISE FOR OF
+
+let numbers = [5, 8, 10, 23, 48, 60]
+
+for (const number of numbers) {
+	console.log(number / 5)
 }
 
-result = result.toUpperCase()
-console.log(result);
+console.log('---------')
+
+for (const number of numbers) {
+	if (number % 2 == 0) {
+		console.log(`Liczba ${number} jest parzysta`)
+	} else {
+		console.log(`Liczba ${number} jest nieparzysta`)
+	}
+}
