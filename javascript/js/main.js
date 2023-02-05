@@ -40,13 +40,13 @@ let ulubionyKolor = 'czerwony'
 // const firstName = 'Tomek'
 // let age = 12
 // age = 18
- 
+
 // const favColor = 'niebieski'
 // const favMeal = 'schabowy'
- 
+
 // let currentCar
 // currentCar = 'Audi'
- 
+
 // let firstName2 = 'Ania'
 // let age2 = 24
 // let favColor2 = 'czerwony'
@@ -86,3 +86,18 @@ let ulubionyKolor = 'czerwony'
 // const num5 = '451'
 // console.log(parseInt(num5));
 
+// -------------- EXERCISE
+
+const x = 50
+let result
+
+if (x >= 100) {
+    result = 'X >= 100'
+} else if (x > 30 & x < 100) {
+    result = 'X jest średniakiem'
+} else {
+    result = 'X jest mały'
+}
+
+result = result.toUpperCase()
+console.log(result);
