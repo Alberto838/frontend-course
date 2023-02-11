@@ -104,18 +104,47 @@ let ulubionyKolor = 'czerwony'
 
 // -------------- EXERCISE FOR OF
 
-let numbers = [5, 8, 10, 23, 48, 60]
+// let numbers = [5, 8, 10, 23, 48, 60]
 
-for (const number of numbers) {
-	console.log(number / 5)
-}
+// for (const number of numbers) {
+// 	console.log(number / 5)
+// }
 
-console.log('---------')
+// console.log('---------')
 
-for (const number of numbers) {
-	if (number % 2 == 0) {
-		console.log(`Liczba ${number} jest parzysta`)
-	} else {
-		console.log(`Liczba ${number} jest nieparzysta`)
-	}
-}
+// for (const number of numbers) {
+// 	if (number % 2 == 0) {
+// 		console.log(`Liczba ${number} jest parzysta`)
+// 	} else {
+// 		console.log(`Liczba ${number} jest nieparzysta`)
+// 	}
+// }
+
+// -------------- EXERCISE ARRAYS
+
+// const drinks = ['pepsi', 'kawa', 'sok']
+// const meals = ['schabowy', 'spaghetti', 'zupa']
+
+// console.log(drinks);
+// console.log(meals);
+
+// const menu = [...drinks, ...meals]
+// console.log(menu);
+
+const numbers = [0, 0, 1, 1, 2, 2, 2]
+const colors = ['red', 'green', 'blue', true, 123]
+const cars = [123, true, 'audi', 'bmw', 'mercedes', 'ferrari', '🤷‍♂️', '👀']
+
+const numbers2 = numbers.slice(0, 2)
+console.log(numbers2)
+
+const numbers3 = numbers.slice(-3)
+console.log(numbers3)
+
+const randomStuff = colors.splice(-2)
+console.log(colors)
+console.log(randomStuff)
+
+const newCars = cars.splice(2, 4, 'test')
+console.log(cars)
+console.log(newCars)
