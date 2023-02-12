@@ -131,20 +131,90 @@ let ulubionyKolor = 'czerwony'
 // const menu = [...drinks, ...meals]
 // console.log(menu);
 
-const numbers = [0, 0, 1, 1, 2, 2, 2]
-const colors = ['red', 'green', 'blue', true, 123]
-const cars = [123, true, 'audi', 'bmw', 'mercedes', 'ferrari', '🤷‍♂️', '👀']
+// const numbers = [0, 0, 1, 1, 2, 2, 2]
+// const colors = ['red', 'green', 'blue', true, 123]
+// const cars = [123, true, 'audi', 'bmw', 'mercedes', 'ferrari', '🤷‍♂️', '👀']
 
-const numbers2 = numbers.slice(0, 2)
-console.log(numbers2)
+// const numbers2 = numbers.slice(0, 2)
+// console.log(numbers2)
 
-const numbers3 = numbers.slice(-3)
-console.log(numbers3)
+// const numbers3 = numbers.slice(-3)
+// console.log(numbers3)
 
-const randomStuff = colors.splice(-2)
-console.log(colors)
-console.log(randomStuff)
+// const randomStuff = colors.splice(-2)
+// console.log(colors)
+// console.log(randomStuff)
 
-const newCars = cars.splice(2, 4, 'test')
-console.log(cars)
-console.log(newCars)
+// const newCars = cars.splice(2, 4, 'test')
+// console.log(cars)
+// console.log(newCars)
+
+// -------------- PRACTICE 1 ARRAYS
+
+// const letters = ['c', 'd']
+// console.log(letters);
+
+// letters.unshift('a', 'b')
+// letters.push('e', 'f')
+
+// console.log(letters);
+
+// console.log(letters.includes('c'));
+
+// -------------- PRACTICE 2 ARRAYS
+
+// const numbers = [1, 2, 3]
+// const food = ['🍔', '🍟', '🍕']
+// console.log(numbers);
+// console.log(food);
+
+// const all = numbers.concat(food)
+// console.log(all);
+
+// const allSpread = [...numbers, ...food]
+// console.log(allSpread);
+
+// -------------- PRACTICE 3 ARRAYS
+
+// const numbers = [1, 5, 13, 26, 48]
+
+// const newNumbers = numbers.map(number => number * 5)
+// console.log(newNumbers)
+
+// newNumbers.forEach(number => {
+// 	if (number % 2 === 0) {
+// 		console.log(`${number} jest liczbą parzystą`)
+// 	} else {
+// 		console.log(`${number} jest liczbą nieparzystą`)
+// 	}
+// })
+
+// -------------- PRACTICE 4 ARRAYS
+
+// const colors = ['yellow']
+
+// colors.unshift('black')
+// colors.push('red')
+
+// console.log(colors)
+
+// // for (i = 0; i < colors.length; i++) {
+// // 	console.log(`My favorite color is: ${colors[i].charAt(0).toUpperCase().concat(colors[i].slice(1))}`)
+// // }
+
+// for (const color of colors) {
+//     console.log(`My favorite color is: ${color.charAt(0).toUpperCase() + color.slice(1)}`);
+// }
+
+// -------------- PRACTICE 5 ARRAYS
+
+// const cars = 'Audi, Mercedes, BMW, Nissan, Dodge'
+
+// const newCars = cars.split(', ')
+// console.log(newCars);
+
+// (newCars.length > 3) ? console.log('Jest OK') : console.log('Nie jest OK');
+// (newCars.includes('Audi')) ? newCars.push('Renault') : newCars.pop()
+
+// console.log(newCars);
+
