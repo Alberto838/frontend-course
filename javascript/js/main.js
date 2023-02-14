@@ -218,3 +218,47 @@ let ulubionyKolor = 'czerwony'
 
 // console.log(newCars);
 
+// -------------- PRACTICE 1 FUNCTIONS
+
+// let score
+
+// const add = (x, y) => {
+// 	score = x + y
+// 	score % 2 === 0 ? even() : odd()
+// }
+
+// const even = x => console.log(`Liczba ${score} jest parzysta`)
+// const odd = x => console.log(`Liczba ${score} jest nieparzysta`)
+
+// add(1, 6)
+
+// -------------- PRACTICE 2 FUNCTIONS
+
+// let celsius, temp
+
+// const fahrenheit = x => {
+// 	celsius = x
+// 	temp = x * 1.8 + 32
+// 	console.log(`${celsius}°C = ${temp}°F`);
+// }
+
+// fahrenheit(38)
+
+// -------------- PRACTICE 3 FUNCTIONS
+
+// const num = 10
+// const numbers = []
+
+// for (let i = 0; i < num; i++) {
+// 	numbers.push(i)
+// }
+
+// console.log(numbers)
+
+// const checker = number => {
+// 	number % 3 === 0 && number != 0
+// 		? console.log(`${number} jest podzielne przez 3`)
+// 		: console.log(`${number} nie jest podzielne przez 3 lub ${number} = 0`)
+// }
+
+// numbers.forEach(checker)
