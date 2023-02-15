@@ -262,3 +262,32 @@ let ulubionyKolor = 'czerwony'
 // }
 
 // numbers.forEach(checker)
+
+// -------------- GET
+
+// const test = document.getElementById('item')
+// console.log(test);
+
+// const test2 = document.getElementsByTagName('li')
+// console.log(test2);
+
+// const test3 = document.getElementsByClassName('test')
+// console.log(test3);
+
+// -------------- EVENTLISTENER
+
+const btn1 = document.querySelector('.btn-1')
+const btn2 = document.querySelector('.btn-2')
+const btn3 = document.querySelector('.btn-3')
+
+btn1.addEventListener('click', function() {
+	console.log('Kliknięto mnie!');
+})
+
+btn2.addEventListener('mouseover', () => console.log('Najechano na mnie!'))
+
+const test = () => {
+	console.log('Double click');
+}
+
+btn3.addEventListener('dblclick', test)
