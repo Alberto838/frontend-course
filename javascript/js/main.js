@@ -276,18 +276,87 @@ let ulubionyKolor = 'czerwony'
 
 // -------------- EVENTLISTENER
 
-const btn1 = document.querySelector('.btn-1')
-const btn2 = document.querySelector('.btn-2')
-const btn3 = document.querySelector('.btn-3')
+// const btn1 = document.querySelector('.btn-1')
+// const btn2 = document.querySelector('.btn-2')
+// const btn3 = document.querySelector('.btn-3')
 
-btn1.addEventListener('click', function() {
-	console.log('Kliknięto mnie!');
-})
+// btn1.addEventListener('click', function() {
+// 	console.log('Kliknięto mnie!');
+// })
 
-btn2.addEventListener('mouseover', () => console.log('Najechano na mnie!'))
+// btn2.addEventListener('mouseover', () => console.log('Najechano na mnie!'))
 
-const test = () => {
-	console.log('Double click');
+// const test = () => {
+// 	console.log('Double click');
+// }
+
+// btn3.addEventListener('dblclick', test)
+
+// -------------- CLASSLIST
+
+// const addBtn = document.querySelector('.add')
+// const removeBtn = document.querySelector('.remove')
+// const toggleBtn = document.querySelector('.toggle')
+// const text = document.querySelector('p')
+
+// const addClass = () => {
+//     text.classList.add('test')
+// }
+
+// const removeClass = () => {
+//     text.classList.remove('test')
+// }
+
+// const toggleClass = () => {
+//     text.classList.toggle('test')
+// }
+
+// addBtn.addEventListener('click', addClass)
+// removeBtn.addEventListener('click', removeClass)
+// toggleBtn.addEventListener('click', toggleClass)
+
+// -------------- ADDING HTML IN JS EXERCISE
+
+// const ulList = document.createElement('ul')
+// document.body.appendChild(ulList)
+// const number = 10
+
+// for (let i = 1; i <= number; i++) {
+//     const liItem = document.createElement('li')
+//     liItem.textContent = i
+// 	ulList.appendChild(liItem)
+// }
+
+// const lastElement = ulList.querySelector('li:last-child')
+// lastElement.textContent = 'Jestem ostatnim elementem!'
+// lastElement.style.backgroundColor = 'royalblue'
+// lastElement.style.padding = '20px 40px'
+// lastElement.style.fontSize = '48px'
+
+const p1 = document.querySelector('.p1')
+const p2 = document.querySelector('.p2')
+const btn1 = document.querySelector('.btn1')
+const btn2 = document.querySelector('.btn2')
+const divSquare = document.querySelector('.square')
+
+const hello = () => {
+    console.log('cześć');
 }
 
-btn3.addEventListener('dblclick', test)
+const colorRed = () => {
+    divSquare.style.backgroundColor = 'tomato'
+}
+
+const colorBlue = () => {
+    divSquare.style.backgroundColor = 'royalblue'
+}
+
+const toggleParagraph = () => {
+    p1.classList.toggle('show')
+    p2.classList.toggle('show')
+}
+
+btn1.addEventListener('dblclick', hello)
+divSquare.addEventListener('mouseenter', colorRed)
+divSquare.addEventListener('mouseleave', colorBlue)
+btn2.addEventListener('click', toggleParagraph)
