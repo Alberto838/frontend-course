@@ -17,9 +17,9 @@ const test6 = document.querySelector('.klasa')
 ;querySelectorAll // przeszukuje wszystkie elementy o danej klasie/id/tagu
 
 
-////////////////////////////////////////////////
-// TWORZENIE I DODAWANIE ELEMENTÓW NA STRONIE //
-////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+// TWORZENIE, DODAWANIE I USUWANIE ELEMENTÓW NA STRONIE //
+//////////////////////////////////////////////////////////
 
 
 // Tworzenie elementów
@@ -41,3 +41,35 @@ test7.append(p, heading, 'tekst')
 // Usuwanie elementów
 rodzic.removeChild(dziecko)
 dziecko.remove()
+
+
+////////////////////////
+// EVENT (e), TARGET //
+////////////////////////
+
+
+const btn = document.querySelector('button')
+const test8 = (e) => {
+    // console.log(e);
+    console.log(e.target); // zawsze odwołuje się do elementu, który klikamy (w przypadku listenera na click)
+    console.log(e.target.offsetTop); // "odległość" od górnej krawędzi przeglądarki do klikniętego elementu
+}
+
+
+/////////////////////////
+// CAPTURING, BUBBLING //
+/////////////////////////
+
+
+// Przy addEventListener domyślnie jest ustawiona faza bąbelkowania -> zaczynamy od najmłodszego dziecka
+// Przy aktualnym zapisie kolejność to: blue -> gold -> lime
+
+const infoGold = (e) => {
+    e.stopPropagation() // wyświetli tylko kliknięty element (bez elementów znajdujących się pod spodem)
+}
+
+lime.addEventListener('click', infoLime, {once: true}) // wykona się tylko przy pierwszym kliknięciu
+blue.addEventListener('click', infoBlue, {capture: true}) // zmiana z fazy bąbelkowania na fazę przechwytywania (zaczynamy od najstarszego rodzica)
+gold.addEventListener('click', infoGold)
+
+pointer-events; none // dodane w CSS sprawi, że ignorowane będą kliki (odwrotność stopPropagation)
