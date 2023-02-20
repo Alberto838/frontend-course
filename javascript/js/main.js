@@ -333,30 +333,45 @@ let ulubionyKolor = 'czerwony'
 // lastElement.style.padding = '20px 40px'
 // lastElement.style.fontSize = '48px'
 
-const p1 = document.querySelector('.p1')
-const p2 = document.querySelector('.p2')
-const btn1 = document.querySelector('.btn1')
-const btn2 = document.querySelector('.btn2')
-const divSquare = document.querySelector('.square')
+// ---------------------
 
-const hello = () => {
-    console.log('cześć');
+// const p1 = document.querySelector('.p1')
+// const p2 = document.querySelector('.p2')
+// const btn1 = document.querySelector('.btn1')
+// const btn2 = document.querySelector('.btn2')
+// const divSquare = document.querySelector('.square')
+
+// const hello = () => {
+//     console.log('cześć');
+// }
+
+// const colorRed = () => {
+//     divSquare.style.backgroundColor = 'tomato'
+// }
+
+// const colorBlue = () => {
+//     divSquare.style.backgroundColor = 'royalblue'
+// }
+
+// const toggleParagraph = () => {
+//     p1.classList.toggle('show')
+//     p2.classList.toggle('show')
+// }
+
+// btn1.addEventListener('dblclick', hello)
+// divSquare.addEventListener('mouseenter', colorRed)
+// divSquare.addEventListener('mouseleave', colorBlue)
+// btn2.addEventListener('click', toggleParagraph)
+
+// -------------- ATTRIBUTES
+
+const img = document.querySelector('img')
+
+img.setAttribute('src', 'https://i.imgur.com/OA9DcKQ.jpeg')
+img.setAttribute('alt', 'cytat i łysy facet')
+
+const printer = () => {
+    console.log('cokolwiek');
 }
 
-const colorRed = () => {
-    divSquare.style.backgroundColor = 'tomato'
-}
-
-const colorBlue = () => {
-    divSquare.style.backgroundColor = 'royalblue'
-}
-
-const toggleParagraph = () => {
-    p1.classList.toggle('show')
-    p2.classList.toggle('show')
-}
-
-btn1.addEventListener('dblclick', hello)
-divSquare.addEventListener('mouseenter', colorRed)
-divSquare.addEventListener('mouseleave', colorBlue)
-btn2.addEventListener('click', toggleParagraph)
+setTimeout(printer, 2000)
