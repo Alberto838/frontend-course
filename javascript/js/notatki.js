@@ -73,3 +73,11 @@ blue.addEventListener('click', infoBlue, {capture: true}) // zmiana z fazy bąbe
 gold.addEventListener('click', infoGold)
 
 pointer-events; none // dodane w CSS sprawi, że ignorowane będą kliki (odwrotność stopPropagation)
+
+
+
+
+
+
+setTimeout
+setInterval
