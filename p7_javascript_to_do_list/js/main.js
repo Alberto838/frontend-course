@@ -68,7 +68,7 @@ const checkClick = (e) => {
 	} else if (e.target.matches('.edit')) {
 		console.log('e');
 	} else if (e.target.matches('.delete')) {
-		console.log('d');
+		console.log('d'); // sfdjksfpzdh
 	}
 }
 
