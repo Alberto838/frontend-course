@@ -81,3 +81,20 @@ pointer-events; none // dodane w CSS sprawi, że ignorowane będą kliki (odwrot
 
 setTimeout
 setInterval
+
+
+/////////////
+// OBJECTS //
+/////////////
+
+const newUser = {
+    name: 'Lisa',
+    age: 23,
+    car: {
+        brand: 'Audi',
+        model: 'A3',
+        color: 'czarny'
+    }
+}
+
+console.log(`${newUser.name} jeździ samochodem marki ${newUser.car.brand}, kolor ${newUser.car.color}`);
