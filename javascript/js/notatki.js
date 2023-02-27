@@ -168,3 +168,189 @@ User.prototype.country = 'Polska'
 User.prototype.race = 'człowiek'
 
 console.log(newUser2);
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// ------------ W listenerach aby odwołać się do funkcji z 
+// ------------ prototypu, musimy to zrobić funkcją
+btn1.addEventListener('click', () => dish1.costs())
+btn2.addEventListener('click', () => dish2.costs())
+btn3.addEventListener('click', () => dish3.costs())
+// -----------------------------------------------------------------------------------------------
+
+// THIS - LOG
+
+console.log(this); // this użyty w zakresie globalnym wskazuje na Window, obiekt najwyższy
+
+// ---------------------
+
+const person = {
+	name: 'Lisa',
+	'fav-meal': 'pizza',
+	address: {
+		city: 'Kraków',
+		'zip-code': '00-000',
+		showCity() {
+			console.log(this);
+		}
+	}
+}
+
+person.address.showCity() // this w zwykłej funkcji wskazuje na obiekt, który jest na lewo od kropki (address)
+
+// ---------------------
+
+function Food(name) {
+	this.name = name // this w konstruktorze wskazuje na obiekt stworzony na podstawie konstruktora (meal, meal2)
+}
+
+const meal = new Food ('pizza')
+const meal2 = new Food ('pepsi')
+
+console.log(meal, meal2);
+
+// ---------------------
+
+const ob = {
+	number: 123,
+	showNumber() {
+		console.log(this.number); // @123@
+	},
+	showNumber2: () => {
+		console.log(this.number); // @undefined@ W funkcji strzałkowej this wskazuje na obiekt Window !!!!!!!!!!!!
+	},
+	// aby działało, trzeba opakować f strzałkową w zwykłą funkcję:
+	showNumber3() {
+		const test = () => {
+			console.log(this.number); // @123@ W funkcji strzałkowej this wskazuje na obiekt Window !!!!!!!!!!!!
+		}
+	}
+}
+
+ob.showNumber()
+ob.showNumber2()
+
+// BIND
+
+function test() {
+	console.log(this); // Window
+	console.log(this.name); // puste pole
+}
+
+const car1 = {
+	name: 'Audi'
+}
+
+const car2 = {
+	name: 'Dodge'
+}
+
+const car3 = {
+	name: 'Nissan'
+}
+
+test.bind(car3)() 
+// po dodaniu:
+// {name: Nissan}
+// Nissan
+
+
+
+// CALL, APPLY
+
+const movie = {
+	title: 'Avengers'
+}
+
+function showMovie(price, cinema) {
+	console.log(`Film ${this.title}, cena ${price}, kino: ${cinema}.`);
+}
+
+showMovie(30, 'SuperKINO') // movie nie zadziała
+
+// funkcja.call(OBIEKT, ARGUMENTY)
+showMovie.call(movie, 35, 'SuperKINO2') // OK
+
+// funkcja.apply(OBIEKT, TABLICA)
+showMovie.apply(movie, [40, 'KINO33']) // OK
+
+
+
+///////////
+// KLASY //
+///////////
+
+
+// Konstruktor:
+function Food(name, price, country) {
+	this.name = name
+	this.price = price
+	this.country = country
+}
+
+Food.prototype.showName = function() {
+	console.log(this.name);
+}
+
+Food.prototype.showDetails = function() {
+    console.log(`${this.name} kosztuje ${this.price}, kraj pochodzenia: ${this.country}.`);
+}
+
+const meal1 = new Food('Pizza', '25zł', 'Włochy')
+meal1.showName()
+meal1.showDetails()
+
+// Po przerobieniu na klasę:
+class Food2 {
+    constructor(name, price, country) {
+        this.name = name
+        this.price = price
+        this.country = country
+    }
+
+    showName() {
+        console.log(this.name);
+    }
+
+    showDetails() {
+        console.log(`${this.name} kosztuje ${this.price}, kraj pochodzenia: ${this.country}.`);
+    }
+}
+
+const meal2 = new Food2('Schabowy', '23zł', 'Polska')
+meal2.showName()
+meal2.showDetails()
+
+
+
+// EXTENDS, SUPER
+class Animal {
+    constructor(name) {
+        this.name = name
+    }
+
+    sound() {
+        console.log('Zwierzak robi hau hau');
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, age) {
+        super(name)
+        this.age = age
+    }
+}
+
+class Cat extends Animal {
+    sound() {
+        console.log(`miau miau`);
+    }
+}
+
+const dog = new Dog('Drops', 6)
+const cat = new Cat('kot')
+
+dog.sound()
+cat.sound()
+
+console.log(dog);
+console.log(cat);
