@@ -354,3 +354,93 @@ cat.sound()
 
 console.log(dog);
 console.log(cat);
+
+
+// OBJECT.ASSIGN
+
+const user = {
+    name: 'Lily',
+    age: 23
+}
+
+const pet = {
+    name: 'Drops',
+    type: 'dog'
+}
+
+const userInfo = Object.assign({}, user, pet)
+console.log(userInfo);
+// name: "Drops"
+// age: 23
+// type: "dog"
+
+const userCopy = Object.assign({}, user)
+userCopy.age = 25
+console.log(userCopy);
+// name: "Lily"
+// age: 25
+
+
+
+// DESTRUKTURYZACJA
+
+const person = {
+    name: 'Lily',
+    age: 23,
+    job: 'DJ',
+    car: {
+        brand: 'Dodge',
+        model: 'Viper'
+    }
+}
+
+const showInfo = () => {
+    const {name, age, job} = person
+
+    console.log(`${name} pracuje jako ${job} i ma ${age} lata.`);
+}
+
+showInfo()
+
+// LUB:
+
+const showInfo2 = ({name, age, job}) => {
+    console.log(`${name} pracuje jako ${job} i ma ${age} lata.`);
+}
+
+showInfo(person)
+
+// ----------------
+
+const showInfo3 = () => {
+    const {car:{brand, model}} = person
+    console.log(`Jej samochód to ${brand} ${model}`);
+}
+
+// LUB:
+
+showInfo3()
+
+const showInfo4 = ({car: {brand, model}}) => {
+    console.log(`Jej samochód to ${brand} ${model}`);
+}
+
+showInfo4(person)
+
+
+/////////////////////
+// JSON, AJAX, API //
+/////////////////////
+
+const btn = document.querySelector('button')
+const img = document.querySelector('img')
+
+const URL = 'https://dog.ceo/api/breeds/image/random'
+
+btn.addEventListener('click', () => {
+	fetch(URL)
+		.then(res => res.json())
+		.then(data => img.setAttribute('src', data.message))
+		.catch(err => console.error(err))
+})
+

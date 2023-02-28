@@ -1,6 +1,5 @@
 // // // -------------- STRINGS
 
-
 // // const name = 'Albert'
 // // const animalName = 'Kulka'
 // // let age = 22
@@ -16,24 +15,21 @@
 // // console.log(`Ciao, sono ${name}, e questa è ${animalName} - il mio cane.`);
 // // console.log(animalName + ' ha già ' + animalAge + ' anni!');
 
-
-
 // // // BEFORE:
 
 // // const firstName = 'Tomek'
 // // let age = 12
 // // age = 18
- 
+
 // // var favColor = 'niebieski'
 // // const fav-meal = 'schabowy'
- 
+
 // // let current.Car
 // // current.Car = 'Audi'
- 
+
 // // let firstName = 'Ania'
 // // let age2 = 24
 // // let ulubionyKolor = 'czerwony'
-
 
 // // // AFTER:
 
@@ -458,3 +454,16 @@
 // meal2.showName()
 // meal2.showDetails()
 
+// // JSON, AJAX, API
+
+// const btn = document.querySelector('button')
+// const img = document.querySelector('img')
+
+// const URL = 'https://dog.ceo/api/breeds/image/random'
+
+// btn.addEventListener('click', () => {
+// 	fetch(URL)
+// 		.then(res => res.json())
+// 		.then(data => img.setAttribute('src', data.message))
+// 		.catch(err => console.error(err))
+// })
