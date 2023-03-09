@@ -467,3 +467,37 @@
 // 		.then(data => img.setAttribute('src', data.message))
 // 		.catch(err => console.error(err))
 // })
+
+// const checkAge = age => {
+// 	return new Promise((resolve, reject) => {
+// 		if (age >= 18) {
+// 			resolve()
+// 		} else {
+// 			reject()
+// 		}
+// 	})
+// }
+
+// const doubleCheck = () => {
+// 	return new Promise(resolve => {
+// 		console.log('Sprawdzam jeszcze raz...')
+// 		setTimeout(() => {
+// 			resolve()
+// 		}, 1000)
+// 	})
+// }
+
+// async function test() {
+// 	try {
+// 		await checkAge(22)
+// 		console.log('Chyba możesz wejść.')
+// 		await doubleCheck()
+// 		console.log('Faktycznie, wiek się zgadza.')
+// 		console.log('Weryfikacja zakończona!')
+// 	} catch {
+// 		console.error('Błąd, masz za mało lat!');
+// 	}
+// }
+
+// test()
+

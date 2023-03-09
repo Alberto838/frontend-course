@@ -141,8 +141,8 @@ function User(name, age) {
 	this.age = age
 
 	this.hello = function () {
-        console.log(`Cześć ${this.name}`);
-    }
+		console.log(`Cześć ${this.name}`)
+	}
 }
 
 const newUser2 = new User('Klaudia', 23)
@@ -161,16 +161,16 @@ const newUser2 = new User('Klaudia', 23)
 const newUser3 = new User('Lily', 32)
 
 User.prototype.hello = function () {
-    console.log(`Cześć ${this.name}`);
+	console.log(`Cześć ${this.name}`)
 }
 
 User.prototype.country = 'Polska'
 User.prototype.race = 'człowiek'
 
-console.log(newUser2);
+console.log(newUser2)
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// ------------ W listenerach aby odwołać się do funkcji z 
+// ------------ W listenerach aby odwołać się do funkcji z
 // ------------ prototypu, musimy to zrobić funkcją
 btn1.addEventListener('click', () => dish1.costs())
 btn2.addEventListener('click', () => dish2.costs())
@@ -179,7 +179,7 @@ btn3.addEventListener('click', () => dish3.costs())
 
 // THIS - LOG
 
-console.log(this); // this użyty w zakresie globalnym wskazuje na Window, obiekt najwyższy
+console.log(this) // this użyty w zakresie globalnym wskazuje na Window, obiekt najwyższy
 
 // ---------------------
 
@@ -190,9 +190,9 @@ const person = {
 		city: 'Kraków',
 		'zip-code': '00-000',
 		showCity() {
-			console.log(this);
-		}
-	}
+			console.log(this)
+		},
+	},
 }
 
 person.address.showCity() // this w zwykłej funkcji wskazuje na obiekt, który jest na lewo od kropki (address)
@@ -203,27 +203,27 @@ function Food(name) {
 	this.name = name // this w konstruktorze wskazuje na obiekt stworzony na podstawie konstruktora (meal, meal2)
 }
 
-const meal = new Food ('pizza')
-const meal2 = new Food ('pepsi')
+const meal = new Food('pizza')
+const meal2 = new Food('pepsi')
 
-console.log(meal, meal2);
+console.log(meal, meal2)
 
 // ---------------------
 
 const ob = {
 	number: 123,
 	showNumber() {
-		console.log(this.number); // @123@
+		console.log(this.number) // @123@
 	},
 	showNumber2: () => {
-		console.log(this.number); // @undefined@ W funkcji strzałkowej this wskazuje na obiekt Window !!!!!!!!!!!!
+		console.log(this.number) // @undefined@ W funkcji strzałkowej this wskazuje na obiekt Window !!!!!!!!!!!!
 	},
 	// aby działało, trzeba opakować f strzałkową w zwykłą funkcję:
 	showNumber3() {
 		const test = () => {
-			console.log(this.number); // @123@ W funkcji strzałkowej this wskazuje na obiekt Window !!!!!!!!!!!!
+			console.log(this.number) // @123@ W funkcji strzałkowej this wskazuje na obiekt Window !!!!!!!!!!!!
 		}
-	}
+	},
 }
 
 ob.showNumber()
@@ -232,37 +232,35 @@ ob.showNumber2()
 // BIND
 
 function test() {
-	console.log(this); // Window
-	console.log(this.name); // puste pole
+	console.log(this) // Window
+	console.log(this.name) // puste pole
 }
 
 const car1 = {
-	name: 'Audi'
+	name: 'Audi',
 }
 
 const car2 = {
-	name: 'Dodge'
+	name: 'Dodge',
 }
 
 const car3 = {
-	name: 'Nissan'
+	name: 'Nissan',
 }
 
-test.bind(car3)() 
+test.bind(car3)()
 // po dodaniu:
 // {name: Nissan}
 // Nissan
 
-
-
 // CALL, APPLY
 
 const movie = {
-	title: 'Avengers'
+	title: 'Avengers',
 }
 
 function showMovie(price, cinema) {
-	console.log(`Film ${this.title}, cena ${price}, kino: ${cinema}.`);
+	console.log(`Film ${this.title}, cena ${price}, kino: ${cinema}.`)
 }
 
 showMovie(30, 'SuperKINO') // movie nie zadziała
@@ -273,12 +271,9 @@ showMovie.call(movie, 35, 'SuperKINO2') // OK
 // funkcja.apply(OBIEKT, TABLICA)
 showMovie.apply(movie, [40, 'KINO33']) // OK
 
-
-
 ///////////
 // KLASY //
 ///////////
-
 
 // Konstruktor:
 function Food(name, price, country) {
@@ -287,12 +282,12 @@ function Food(name, price, country) {
 	this.country = country
 }
 
-Food.prototype.showName = function() {
-	console.log(this.name);
+Food.prototype.showName = function () {
+	console.log(this.name)
 }
 
-Food.prototype.showDetails = function() {
-    console.log(`${this.name} kosztuje ${this.price}, kraj pochodzenia: ${this.country}.`);
+Food.prototype.showDetails = function () {
+	console.log(`${this.name} kosztuje ${this.price}, kraj pochodzenia: ${this.country}.`)
 }
 
 const meal1 = new Food('Pizza', '25zł', 'Włochy')
@@ -301,49 +296,47 @@ meal1.showDetails()
 
 // Po przerobieniu na klasę:
 class Food2 {
-    constructor(name, price, country) {
-        this.name = name
-        this.price = price
-        this.country = country
-    }
+	constructor(name, price, country) {
+		this.name = name
+		this.price = price
+		this.country = country
+	}
 
-    showName() {
-        console.log(this.name);
-    }
+	showName() {
+		console.log(this.name)
+	}
 
-    showDetails() {
-        console.log(`${this.name} kosztuje ${this.price}, kraj pochodzenia: ${this.country}.`);
-    }
+	showDetails() {
+		console.log(`${this.name} kosztuje ${this.price}, kraj pochodzenia: ${this.country}.`)
+	}
 }
 
 const meal2 = new Food2('Schabowy', '23zł', 'Polska')
 meal2.showName()
 meal2.showDetails()
 
-
-
 // EXTENDS, SUPER
 class Animal {
-    constructor(name) {
-        this.name = name
-    }
+	constructor(name) {
+		this.name = name
+	}
 
-    sound() {
-        console.log('Zwierzak robi hau hau');
-    }
+	sound() {
+		console.log('Zwierzak robi hau hau')
+	}
 }
 
 class Dog extends Animal {
-    constructor(name, age) {
-        super(name)
-        this.age = age
-    }
+	constructor(name, age) {
+		super(name)
+		this.age = age
+	}
 }
 
 class Cat extends Animal {
-    sound() {
-        console.log(`miau miau`);
-    }
+	sound() {
+		console.log(`miau miau`)
+	}
 }
 
 const dog = new Dog('Drops', 6)
@@ -352,60 +345,57 @@ const cat = new Cat('kot')
 dog.sound()
 cat.sound()
 
-console.log(dog);
-console.log(cat);
-
+console.log(dog)
+console.log(cat)
 
 // OBJECT.ASSIGN
 
 const user = {
-    name: 'Lily',
-    age: 23
+	name: 'Lily',
+	age: 23,
 }
 
 const pet = {
-    name: 'Drops',
-    type: 'dog'
+	name: 'Drops',
+	type: 'dog',
 }
 
 const userInfo = Object.assign({}, user, pet)
-console.log(userInfo);
+console.log(userInfo)
 // name: "Drops"
 // age: 23
 // type: "dog"
 
 const userCopy = Object.assign({}, user)
 userCopy.age = 25
-console.log(userCopy);
+console.log(userCopy)
 // name: "Lily"
 // age: 25
-
-
 
 // DESTRUKTURYZACJA
 
 const person = {
-    name: 'Lily',
-    age: 23,
-    job: 'DJ',
-    car: {
-        brand: 'Dodge',
-        model: 'Viper'
-    }
+	name: 'Lily',
+	age: 23,
+	job: 'DJ',
+	car: {
+		brand: 'Dodge',
+		model: 'Viper',
+	},
 }
 
 const showInfo = () => {
-    const {name, age, job} = person
+	const { name, age, job } = person
 
-    console.log(`${name} pracuje jako ${job} i ma ${age} lata.`);
+	console.log(`${name} pracuje jako ${job} i ma ${age} lata.`)
 }
 
 showInfo()
 
 // LUB:
 
-const showInfo2 = ({name, age, job}) => {
-    console.log(`${name} pracuje jako ${job} i ma ${age} lata.`);
+const showInfo2 = ({ name, age, job }) => {
+	console.log(`${name} pracuje jako ${job} i ma ${age} lata.`)
 }
 
 showInfo(person)
@@ -413,20 +403,21 @@ showInfo(person)
 // ----------------
 
 const showInfo3 = () => {
-    const {car:{brand, model}} = person
-    console.log(`Jej samochód to ${brand} ${model}`);
+	const {
+		car: { brand, model },
+	} = person
+	console.log(`Jej samochód to ${brand} ${model}`)
 }
 
 // LUB:
 
 showInfo3()
 
-const showInfo4 = ({car: {brand, model}}) => {
-    console.log(`Jej samochód to ${brand} ${model}`);
+const showInfo4 = ({ car: { brand, model } }) => {
+	console.log(`Jej samochód to ${brand} ${model}`)
 }
 
 showInfo4(person)
-
 
 /////////////////////
 // JSON, AJAX, API //
@@ -444,3 +435,81 @@ btn.addEventListener('click', () => {
 		.catch(err => console.error(err))
 })
 
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! WAŻNE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\\
+
+/////////////
+// PROMISY //
+/////////////
+
+// Używamy:
+// 1. Nie chcemy robić callback hell
+// 2. Kiedy nie jesteśmy pewni jaki będzie rezultat jakiejś funkcji / czy plik zostanie pobrany z serwera
+
+const test = new Promise((resolve, reject) => {
+	if (true) {
+		resolve('jest ok')
+	} else {
+		reject('błąd')
+	}
+})
+
+test.then(info => console.log(info)).catch(err => console.error(err))
+
+///////////////////
+// ASYNC & AWAIT //
+///////////////////
+
+const checkAge = age => {
+	return new Promise((resolve, reject) => {
+		if (age >= 18) {
+			resolve()
+		} else {
+			reject()
+		}
+	})
+}
+
+const doubleCheck = () => {
+	return new Promise(resolve => {
+		console.log('Sprawdzam jeszcze raz...')
+		setTimeout(() => {
+			resolve('Faktycznie, wiek się zgadza')
+		}, 1000)
+	})
+}
+
+async function test() {
+	try {
+		await checkAge(22)
+		console.log('Chyba możesz wejść')
+		await doubleCheck()
+		console.log('Faktycznie, wiek się zgadza')
+		console.log('Weryfikacja zakończona!')
+	} catch {
+		console.error('Błąd, masz za mało lat!')
+	}
+}
+
+test()
+
+// AXIOS
+
+const URL = 'https://dog.ceo/api/breeds/image/random'
+
+// zwykły fetch
+fetch(URL)
+	.then(res => res.json())
+	.then(res => one.setAttribute('src', res.message))
+
+// fetch axios
+axios.get(URL).then(res => two.setAttribute('src', res.data.message))
+
+// async & wait z axiosem
+async function showImage() {
+	const response = await axios.get(URL)
+	three.setAttribute('src', response.data.message)
+}
+
+showImage()
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! WAŻNE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\\
